@@ -22,7 +22,7 @@ public class Solution {
         {
             return null;
         }
-        var root=new TreeNode(postorder[postend]);
+        var root=new TreeNode(postorder[postend--]);
         var index=-1;
         for(int i=instart;i<inend;i++)
         {
@@ -32,7 +32,7 @@ public class Solution {
                 break;
             }
         }
-        postend--;
+        
          root.right=BuildHere(ref postend,index+1,inend,inorder,postorder);
         root.left=BuildHere(ref postend,instart,index,inorder,postorder);
        
