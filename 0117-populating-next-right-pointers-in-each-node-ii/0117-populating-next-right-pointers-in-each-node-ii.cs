@@ -23,10 +23,13 @@ public class Node {
 
 public class Solution {
     public Node Connect(Node root) {
-        
+        if(root==null)
+        {
+            return root;
+        }
         var queue=new Queue<Node>();
         queue.Enqueue(root);
-        while(root!=null && queue.Count>0)
+        while( queue.Count>0)
         {
             var number=queue.Count;
             for(int i=0;i<number;i++)
