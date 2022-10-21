@@ -23,7 +23,7 @@ public class Solution {
         var rightdepth=MinDepth(root.right);
         if(leftdepth==0 || rightdepth==0)
         {
-            return 1+Math.Max(leftdepth,rightdepth);
+            return 1+leftdepth+rightdepth;
         }
         return 1+Math.Min(leftdepth,rightdepth);
         
