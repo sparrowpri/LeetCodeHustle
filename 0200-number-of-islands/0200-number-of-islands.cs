@@ -12,18 +12,17 @@ public class Solution {
             if(grid[i][j]=='1' )
             {
                 
-                bfs(i,j,grid);
+                bfs(i,j,grid,rows,columns);
                 islands+=1;
             }
         }
     }
         return islands;
     }
-    public void bfs(int i,int j,char[][] grid)
+    public void bfs(int i,int j,char[][] grid,int rows,int columns)
     {
         
-        var rows=grid.Length;
-        var columns=grid[0].Length;
+       
         var queue=new Queue<int[]>();
         queue.Enqueue(new int[2]{i,j});
         while(queue.Count>0)
