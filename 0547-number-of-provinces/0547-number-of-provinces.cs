@@ -7,7 +7,7 @@ public class Solution {
           if(visited[i]==0)
           {
               ans+=1;
-              dfs(i,visited,isConnected);
+              bfs(isConnected,visited,i);
           }
       }
         return ans;
@@ -22,6 +22,25 @@ public class Solution {
                 dfs(i,visited,adjmatrix);
             }
             
+        }
+    }
+    public void bfs(int[][] adjmatrix,int[] visited,int node)
+    {
+        var queue=new Queue<int>();
+        queue.Enqueue(node);
+        visited[node]=1;
+        while(queue.Any())
+        {
+            var deque=queue.Dequeue();
+            for(int i=0;i<adjmatrix[deque].Length;i++)
+        {
+            if(adjmatrix[deque][i]==1 && visited[i]==0 && i!=node )
+            {
+                queue.Enqueue(i);
+                visited[i]=1;
+            }
+            
+        }
         }
     }
 }
