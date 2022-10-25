@@ -28,7 +28,7 @@ public class Solution {
         arr[0]=Math.Max(Math.Max(lefth[0],righth[0])+root.val,root.val);
         arr[1]=Math.Max(arr[0],lefth[0]+righth[0]+root.val);
         arr[2]=Math.Max(Math.Max(lefth[2],righth[2]),arr[1]);
-        arr[2]=Math.Max(arr[2],root.val);
+        
         
         
         return arr;
