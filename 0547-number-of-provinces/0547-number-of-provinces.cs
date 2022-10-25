@@ -8,6 +8,8 @@ public class Solution {
           {
               ans+=1;
               bfs(isConnected,visited,i);
+              //uncomment below line to use dfs code
+              //dfs(i,visited,adjmatrix);
           }
       }
         return ans;
